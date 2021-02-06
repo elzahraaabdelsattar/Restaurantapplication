@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.app.srestaurantapplication">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ui.offers.OffersActivity"></activity>
+        <activity android:name=".ui.check.CheckActivity" />
+        <activity android:name=".ui.LocationActivity" />
+        <activity android:name=".ui.registeration.RegistrationActivity" />
+        <activity android:name=".ui.registeration.SignInActivity" />
+        <activity android:name=".ui.foodMenu.FoodMenuActivity" />
+        <activity android:name=".ui.registeration.SignUpActivity" />
+        <activity android:name=".ui.BranchesActivity" />
+        <activity android:name=".ui.myOrders.MyOrdersActivity" />
+        <activity android:name=".ui.ReservationActivity" />
+        <activity android:name=".ui.ComplaintsActivity" />
+        <activity android:name=".ui.AboutUs" />
+        <activity android:name=".ui.ConfirmationActivity" />
+        <activity android:name=".ui.bag.Bag" />
+        <activity android:name=".ui.ReviewActivity" />
+        <activity android:name=".ui.orderDescription.OrderDescriptionActivity" />
+        <activity android:name=".ui.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
