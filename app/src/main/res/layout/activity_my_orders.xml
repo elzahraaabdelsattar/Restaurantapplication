@@ -1,74 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.bag.Bag">
+    android:layoutDirection="rtl"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:id="@+id/drawer_layout_myOrders"
+    tools:openDrawer="right"
+    tools:context=".ui.myOrders.MyOrdersActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/tool_bar"
-        android:layout_width="0dp"
-        android:layout_height="70dp"
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/content_my_orders"
+        />
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view_myOrders"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:layout_gravity="right"
+        app:menu="@menu/main_menu"
+        app:headerLayout="@layout/nav_header"
         android:background="@color/app_main_color"
-        android:minHeight="?attr/actionBarSize"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/toolbar_layout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-
-            <TextView
-                android:id="@+id/logo_main_imageView"
-                android:layout_width="84dp"
-                android:layout_height="30dp"
-                android:layout_marginTop="20dp"
-                android:text="@string/my_orders_menu"
-                android:textColor="@color/white_color"
-                android:textSize="22sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.423"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </androidx.appcompat.widget.Toolbar>
-
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_myOrdersActivity"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="30dp"
-        android:paddingBottom="16dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tool_bar"
-        app:layout_constraintVertical_bias="0.028" />
-
-    <ProgressBar
-        android:id="@+id/my_orders_progressBar"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:indeterminateDrawable="@drawable/primary_color_progress_bar"
-        android:visibility="gone"
+        style="@style/Widget.Custom.NavigationView"
         />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
